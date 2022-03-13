@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a bash script to start the studentske-beleske project
+
+sudo systemctl start docker.service
+
+docker-compose up -d
+
+cd src
+npm run watch
