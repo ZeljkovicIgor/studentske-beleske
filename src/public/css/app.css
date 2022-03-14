@@ -611,26 +611,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!h-\[35rem\] {
   height: 35rem !important;
 }
-.h-\[35rem\] {
-  height: 35rem;
-}
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-\[35rem\] {
-  min-height: 35rem;
-}
-.min-h-\[40rem\] {
-  min-height: 40rem;
-}
-.min-h-\[50rem\] {
-  min-height: 50rem;
-}
-.min-h-\[60rem\] {
-  min-height: 60rem;
-}
-.min-h-full {
-  min-height: 100%;
 }
 .min-h-\[48rem\] {
   min-height: 48rem;
@@ -670,9 +652,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-6xl {
   max-width: 72rem;
-}
-.grow {
-  flex-grow: 1;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -763,10 +742,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-pink-300 {
   --tw-border-opacity: 1;
   border-color: rgb(249 168 212 / var(--tw-border-opacity));
-}
-.\!border-black {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
 }
 .bg-white {
   --tw-bg-opacity: 1;

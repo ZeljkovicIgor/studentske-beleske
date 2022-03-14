@@ -2,7 +2,8 @@
     <div class="flex justify-center">
         <div class="flex flex-col w-1/2 my-4 px-8 py-6 text-left bg-white border rounded-[16px] shadow-lg">
             <h3 class="text-center text-2xl font-bold">{{ $note->title }}</h3>
-            <form x-data="quillField" @submit="quillSubmit($refs)" action="/notes/{{ $note->id }}/edit" method="post" accept-charset="utf-8">
+            <form x-data="quillField" @submit="quillSubmit($refs)" action="/notes/{{ $note->id }}/edit"
+                method="post" accept-charset="utf-8">
                 @method('PUT')
                 @csrf
                 <div class="mt-6 flex min-h-[48rem] justify-between flex-col gap-6">
@@ -15,6 +16,14 @@
                         <div class="w-full">
                             <label class="font-bold" for="note_date">Datum nastave</label>
                             <x-date-picker :existing-date="$note->course_date" name="course_date" />
+                        </div>
+                        <div class="w-full">
+                            <label class="font-bold" for="course_id">Predmet</label>
+                            <select name="course_id" id="course_id" class="w-full px-4 py-2 mt-2 border rounded-md bg-white">
+                                @foreach ($courses as $course)
+                                    <option value="{{ $course->id }}" @selected($course->id == $note->course_id)>{{ $course->course_name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="bg-honeydew" id="editorHolder" hidden>
