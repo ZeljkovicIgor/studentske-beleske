@@ -27,7 +27,8 @@ class UpdateNoteRequest extends FormRequest
             'title' => 'string',
             'content' => 'string',
             'course_date' => 'date',
-            'content' => 'string'
+            'content' => 'string',
+            'course_id' => 'string'
         ];
     }
 }

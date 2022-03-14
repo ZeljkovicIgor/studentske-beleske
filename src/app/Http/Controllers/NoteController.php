@@ -56,7 +56,7 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
-        return view('notes.show', ['note' => $note]);
+        return view('notes.show', ['note' => $note, 'courses' => Auth::user()->courses]);
     }
 
     /**
@@ -68,9 +68,10 @@ class NoteController extends Controller
      */
     public function update(UpdateNoteRequest $request, Note $note)
     {
+        $course_id = $note->course_id;
         $note->update($request->validated());
 
-        return redirect()->route('show-course', ['course' => $note->course_id]);
+        return redirect()->route('show-course', ['course' => $course_id]);
     }
 
     /**
