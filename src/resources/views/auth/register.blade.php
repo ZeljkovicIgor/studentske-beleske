@@ -1,6 +1,6 @@
 <x-index title="Registracija">
-    <div class="flex items-center justify-center min-h-screen bg-honeydew">
-        <div class="px-8 py-6 mt-4 text-left bg-mintcream shadow-lg rounded-lg">
+    <div class="flex items-center justify-center min-h-screen bg-mintcream">
+        <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg rounded-lg">
             <h3 class="text-2xl font-bold text-center">Registracija</h3>
             <form action="/register" method="post">
                 @csrf
@@ -32,7 +32,7 @@
                     </div>
                     <div class="flex items-baseline justify-between">
                         <input type="submit" value="Registrujte se"
-                            class="px-6 py-2 mt-4 text-white bg-seagreen rounded-lg hover:bg-forest cursor-pointer" />
+                            class="px-6 py-2 mt-4 text-mintcream bg-seagreen rounded-lg hover:bg-forest cursor-pointer" />
                         <a href="/login" class="text-sm text-forest hover:underline">Prijava</a>
                     </div>
                     <div class="text-red-600 mt-4">
