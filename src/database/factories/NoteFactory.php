@@ -16,7 +16,7 @@ class NoteFactory extends Factory
     {
         return [
             'title' => $this->faker->colorName(),
-            'content' => $this->faker->paragraph(),
+            'content' => $this->faker->words(300, true),
             'course_date' => $this->faker->date(),
             'course_id' => Course::inRandomOrder()->first()
         ];
