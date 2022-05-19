@@ -28,4 +28,17 @@ class LoginFormRequest extends FormRequest
             'password' => 'required',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'username.required' => 'Unos korisnickog imena je obavezan',
+            'password.required' => 'Unos lozinke je obavezan',
+        ];
+    }
 }

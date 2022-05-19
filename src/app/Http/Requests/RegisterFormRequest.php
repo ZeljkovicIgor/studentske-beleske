@@ -28,4 +28,19 @@ class RegisterFormRequest extends FormRequest
             'password' => 'required|confirmed',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'username.required' => 'Unos korisnickog imena je obavezan',
+            'username.unique' => 'Korisnicko ime je zauzeto',
+            'password.required' => 'Unos lozinke je obavezan',
+            'password.confirmed' => 'Greska tokom potvrde lozinke'
+        ];
+    }
 }

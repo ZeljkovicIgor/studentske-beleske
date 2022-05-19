@@ -35,4 +35,18 @@ class ChangePasswordRequest extends FormRequest
 
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'old_password.required' => 'Unos stare lozinke je obavezan',
+            'new_password.required' => 'Unos nove lozinke je obavezan',
+            'new_password.confirmed' => 'Greska tokom potvrde nove lozinke'
+        ];
+    }
 }
