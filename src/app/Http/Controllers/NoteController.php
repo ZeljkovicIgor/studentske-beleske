@@ -36,14 +36,9 @@ class NoteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UpdateNoteRequest $request)
     {
-        Note::create([
-            'title' => $request['title'],
-            'content' => $request['content'],
-            'course_date' => $request['course_date'],
-            'course_id' => $request['course_id']
-        ]);
+        Note::create($request->validated());
 
         return redirect()->route('show-course', ['course' => $request['course_id']]);
     }

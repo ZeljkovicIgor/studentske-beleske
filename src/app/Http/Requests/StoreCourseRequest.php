@@ -24,7 +24,7 @@ class StoreCourseRequest extends FormRequest
     public function rules()
     {
         return [
-            'course_name' => 'string'
+            'course_name' => 'required|string'
         ];
     }
 }

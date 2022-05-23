@@ -24,10 +24,10 @@ class UpdateNoteRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string',
-            'content' => 'string',
+            'title' => 'required|string',
+            'content' => 'required|string',
             'course_date' => 'date',
-            'content' => 'string'
+            'course_id' => 'required'
         ];
     }
 }
